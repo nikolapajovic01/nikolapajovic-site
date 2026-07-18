@@ -172,8 +172,8 @@ export default function AboutPage() {
             <span style={{ color: "var(--accent-light)" }}>Ask me on a call.</span>
           </Reveal>
           <Reveal style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 22 }}>
-            <a href="mailto:nikola@nikolapajovic.com" className="btn btn-light">
-              nikola@nikolapajovic.com
+            <a href="mailto:hello@nikolapajovic.com" className="btn btn-light">
+              hello@nikolapajovic.com
             </a>
             <a
               href="https://www.linkedin.com/in/nikolapajovic"

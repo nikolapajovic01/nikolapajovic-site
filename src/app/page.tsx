@@ -401,8 +401,8 @@ export default function HomePage() {
             whether AI solves it — and what it would take to build. No pitch.
           </Reveal>
           <Reveal style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 22 }}>
-            <a href="mailto:nikola@nikolapajovic.com" className="btn btn-light">
-              nikola@nikolapajovic.com
+            <a href="mailto:hello@nikolapajovic.com" className="btn btn-light">
+              hello@nikolapajovic.com
             </a>
             <a
               href="https://www.linkedin.com/in/nikolapajovic"

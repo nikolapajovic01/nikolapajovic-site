@@ -185,8 +185,8 @@ export default function WritingPage() {
             <span style={{ color: "var(--accent-light)" }}>Let&apos;s scope it.</span>
           </Reveal>
           <Reveal style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 22 }}>
-            <a href="mailto:nikola@nikolapajovic.com" className="btn btn-light">
-              nikola@nikolapajovic.com
+            <a href="mailto:hello@nikolapajovic.com" className="btn btn-light">
+              hello@nikolapajovic.com
             </a>
             <Link href="/#contact" className="link-underline link-underline--dark">
               Back to home ↗
