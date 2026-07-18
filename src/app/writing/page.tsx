@@ -14,7 +14,7 @@ export default function WritingPage() {
     <div style={{ minHeight: "100vh" }}>
       <Nav active="writing" />
 
-      <header className="container" style={{ padding: "100px 0 90px" }}>
+      <header className="container" style={{ paddingTop: "100px", paddingBottom: "90px" }}>
         <Reveal
           className="mono"
           style={{ fontSize: 13, letterSpacing: "0.1em", color: "var(--muted-3)", marginBottom: 36 }}
@@ -45,7 +45,7 @@ export default function WritingPage() {
 
       {/* Case studies */}
       <section style={{ background: "var(--dark-bg)", color: "var(--dark-fg)" }}>
-        <div className="container" style={{ padding: "100px 0 110px" }}>
+        <div className="container" style={{ paddingTop: "100px", paddingBottom: "110px" }}>
           <Reveal
             style={{
               display: "flex",
@@ -68,9 +68,9 @@ export default function WritingPage() {
             {cases.map((c) => (
               <Reveal
                 key={c.no}
+                className="ghost-row"
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "minmax(90px, 200px) 1fr",
                   gap: "20px 48px",
                   alignItems: "start",
                   padding: "44px 0",
@@ -130,7 +130,7 @@ export default function WritingPage() {
       </section>
 
       {/* Posts */}
-      <section className="container" style={{ padding: "110px 0 120px" }}>
+      <section className="container" style={{ paddingTop: "110px", paddingBottom: "120px" }}>
         <Reveal
           style={{
             display: "flex",
@@ -169,7 +169,7 @@ export default function WritingPage() {
 
       {/* CTA */}
       <section style={{ background: "var(--dark-bg)", color: "var(--dark-fg)" }}>
-        <div className="container" style={{ padding: "100px 0 90px" }}>
+        <div className="container" style={{ paddingTop: "100px", paddingBottom: "90px" }}>
           <Reveal as="h2"
             style={{
               margin: "0 0 40px",

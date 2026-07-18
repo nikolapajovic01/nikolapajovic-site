@@ -87,6 +87,28 @@ a {
 }
 
 /* Nav */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px 24px;
+}
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 10px 16px;
+  }
+  .nav-links .btn {
+    padding: 9px 18px;
+    font-size: 14px;
+  }
+}
 .nav-link {
   font-size: 15px;
   text-decoration: none;
@@ -244,6 +266,20 @@ a {
 }
 .ghost-number--dark {
   -webkit-text-stroke: 1.5px rgba(244, 242, 238, 0.35);
+}
+
+/* Ghost-number two-column row (pillars, timelines, case studies) */
+.ghost-row {
+  grid-template-columns: minmax(100px, 240px) 1fr;
+}
+@media (max-width: 640px) {
+  .ghost-row {
+    grid-template-columns: 1fr !important;
+    row-gap: 12px !important;
+  }
+  .ghost-row .ghost-number {
+    font-size: 40px !important;
+  }
 }
 
 /* Timeline dot */

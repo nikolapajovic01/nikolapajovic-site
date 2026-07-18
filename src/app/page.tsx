@@ -11,7 +11,7 @@ export default function HomePage() {
       <Nav />
 
       {/* Hero */}
-      <header id="top" className="container" style={{ padding: "110px 0 120px" }}>
+      <header id="top" className="container" style={{ paddingTop: "110px", paddingBottom: "120px" }}>
         <Reveal className="chip" style={{ marginBottom: 44 }}>
           <span className="chip-dot" />
           Available for new projects — Q3 2026
@@ -75,7 +75,7 @@ export default function HomePage() {
       <Marquee />
 
       {/* What I do */}
-      <section className="container" style={{ padding: "130px 0 110px" }}>
+      <section className="container" style={{ paddingTop: "130px", paddingBottom: "110px" }}>
         <Reveal
           className="mono"
           style={{
@@ -91,9 +91,9 @@ export default function HomePage() {
           {pillars.map((p) => (
             <Reveal
               key={p.index}
+              className="ghost-row"
               style={{
                 display: "grid",
-                gridTemplateColumns: "minmax(90px, 220px) 1fr",
                 gap: 24,
                 alignItems: "start",
                 padding: "48px 0",
@@ -153,7 +153,7 @@ export default function HomePage() {
         id="track"
         style={{ background: "var(--dark-bg)", color: "var(--dark-fg)" }}
       >
-        <div className="container" style={{ padding: "120px 0 140px" }}>
+        <div className="container" style={{ paddingTop: "120px", paddingBottom: "140px" }}>
           <Reveal
             style={{
               display: "flex",
@@ -184,9 +184,9 @@ export default function HomePage() {
               <Reveal key={t.year} style={{ position: "relative", paddingBottom: 88 }}>
                 <span className="timeline-dot" />
                 <div
+                  className="ghost-row"
                   style={{
                     display: "grid",
-                    gridTemplateColumns: "minmax(110px, 260px) 1fr",
                     gap: "20px 48px",
                     alignItems: "start",
                   }}
@@ -286,7 +286,7 @@ export default function HomePage() {
       </section>
 
       {/* How I work */}
-      <section id="process" className="container" style={{ padding: "120px 0 110px" }}>
+      <section id="process" className="container" style={{ paddingTop: "120px", paddingBottom: "110px" }}>
         <Reveal
           className="mono"
           style={{
@@ -332,7 +332,7 @@ export default function HomePage() {
       </section>
 
       {/* Working together */}
-      <section className="container" style={{ padding: "0 36px 130px" }}>
+      <section className="container" style={{ paddingBottom: "130px" }}>
         <Reveal
           className="mono"
           style={{
@@ -372,7 +372,7 @@ export default function HomePage() {
 
       {/* Contact */}
       <section id="contact" style={{ background: "var(--dark-bg)", color: "var(--dark-fg)" }}>
-        <div className="container" style={{ padding: "130px 0 100px" }}>
+        <div className="container" style={{ paddingTop: "130px", paddingBottom: "100px" }}>
           <Reveal as="h2"
             style={{
               margin: "0 0 30px",

@@ -3,14 +3,8 @@ import Link from "next/link";
 export default function Nav({ active }: { active?: "about" | "writing" }) {
   return (
     <nav
-      className="container"
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        gap: 24,
-        padding: "30px 36px",
-      }}
+      className="container nav"
+      style={{ paddingTop: 24, paddingBottom: 24 }}
     >
       <Link
         href="/"
@@ -24,7 +18,7 @@ export default function Nav({ active }: { active?: "about" | "writing" }) {
       >
         Nikola Pajović
       </Link>
-      <div style={{ display: "flex", alignItems: "center", gap: 30 }}>
+      <div className="nav-links">
         <Link
           href="/about"
           className={`nav-link${active === "about" ? " nav-link--active" : ""}`}

@@ -15,7 +15,7 @@ export default function AboutPage() {
       <Nav active="about" />
 
       {/* Intro */}
-      <header className="container" style={{ padding: "100px 0 110px" }}>
+      <header className="container" style={{ paddingTop: "100px", paddingBottom: "110px" }}>
         <div
           style={{
             display: "grid",
@@ -77,7 +77,7 @@ export default function AboutPage() {
 
       {/* Background */}
       <section style={{ background: "var(--dark-bg)", color: "var(--dark-fg)" }}>
-        <div className="container" style={{ padding: "110px 0 120px" }}>
+        <div className="container" style={{ paddingTop: "110px", paddingBottom: "120px" }}>
           <Reveal
             style={{
               display: "flex",
@@ -101,9 +101,9 @@ export default function AboutPage() {
               <Reveal key={b.title} style={{ position: "relative", paddingBottom: 72 }}>
                 <span className="timeline-dot" />
                 <div
+                  className="ghost-row"
                   style={{
                     display: "grid",
-                    gridTemplateColumns: "minmax(100px, 220px) 1fr",
                     gap: "16px 48px",
                     alignItems: "start",
                   }}
@@ -133,7 +133,7 @@ export default function AboutPage() {
       </section>
 
       {/* Principles */}
-      <section className="container" style={{ padding: "110px 0" }}>
+      <section className="container" style={{ paddingTop: "110px", paddingBottom: "110px" }}>
         <Reveal
           className="mono"
           style={{ fontSize: 13, letterSpacing: "0.1em", color: "var(--muted-3)", marginBottom: 40 }}
@@ -156,7 +156,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section style={{ background: "var(--dark-bg)", color: "var(--dark-fg)" }}>
-        <div className="container" style={{ padding: "100px 0 90px" }}>
+        <div className="container" style={{ paddingTop: "100px", paddingBottom: "90px" }}>
           <Reveal as="h2"
             style={{
               margin: "0 0 40px",
