@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Nikola Pajović — AI Consultant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #0c0b09; color: #ece8e0; font-family: 'Space Grotesk', sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: #ece8e0; }
+a:hover { color: #ffb454; }
+::selection { background: rgba(255,180,84,0.25); }
+</style>
+</helmet>
+<div style="background: #0c0b09; min-height: 100vh;">
+
+  <nav style="display: flex; align-items: baseline; justify-content: space-between; gap: 24px; max-width: 1240px; margin: 0 auto; padding: 32px 32px 0;">
+    <a href="#top" style="font-family: 'Instrument Serif', serif; font-style: italic; font-size: 22px; text-decoration: none; color: #ece8e0;">Nikola Pajović</a>
+    <div style="display: flex; align-items: baseline; gap: 32px;">
+      <a href="#work" style="font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: #96907f;" style-hover="color: #ece8e0;">Work</a>
+      <a href="#process" style="font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: #96907f;" style-hover="color: #ece8e0;">Process</a>
+      <a href="#contact" style="font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; color: {{ accent }};">Book a call</a>
+    </div>
+  </nav>
+
+  <header id="top" style="max-width: 1240px; margin: 0 auto; padding: 140px 32px 120px;">
+    <div data-reveal style="font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #96907f; margin-bottom: 44px;">AI Consultant — Belgrade → Worldwide</div>
+    <h1 data-reveal style="margin: 0 0 48px; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(52px, 9vw, 128px); line-height: 1.0; letter-spacing: -0.02em; max-width: 14ch; text-wrap: balance;">I build AI systems that <em style="color: {{ accent }};">make it to production.</em></h1>
+    <div data-reveal style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; align-items: end;">
+      <p style="margin: 0; font-size: 19px; line-height: 1.6; color: #b3ada0; max-width: 52ch; text-wrap: pretty;">Agents, RAG pipelines, LLM products — designed, built, and shipped by one senior engineer. No account managers, no discovery workshops, no decks.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: flex-end;">
+        <a href="#contact" style="display: inline-block; font-size: 16px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: #0c0b09; background: {{ accent }}; text-decoration: none; padding: 16px 36px; border-radius: 999px;" style-hover="background: #ece8e0; color: #0c0b09;">Book a call</a>
+      </div>
+    </div>
+  </header>
+
+  <section style="border-top: 1px solid rgba(236,232,224,0.14);">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 40px 32px 100px;">
+      <div data-reveal style="display: flex; align-items: baseline; gap: 24px; margin-bottom: 72px;">
+        <span style="font-family: 'Instrument Serif', serif; font-size: 20px; color: {{ accent }};">01</span>
+        <h2 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(32px, 4vw, 48px);">What I do</h2>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="3">
+          <div data-reveal style="display: grid; grid-template-columns: minmax(200px, 1fr) 2fr; gap: 32px; padding: 40px 0; border-top: 1px solid rgba(236,232,224,0.12);">
+            <h3 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.15;">{{ p.title }}</h3>
+            <div>
+              <p style="margin: 0 0 18px; font-size: 17px; line-height: 1.65; color: #b3ada0; max-width: 62ch; text-wrap: pretty;">{{ p.body }}</p>
+              <div style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #6d675a;">{{ p.stack }}</div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" style="border-top: 1px solid rgba(236,232,224,0.14);">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 40px 32px 100px;">
+      <div data-reveal style="display: flex; align-items: baseline; gap: 24px; margin-bottom: 72px;">
+        <span style="font-family: 'Instrument Serif', serif; font-size: 20px; color: {{ accent }};">02</span>
+        <h2 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(32px, 4vw, 48px);">Selected work</h2>
+      </div>
+      <div data-reveal style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 64px; align-items: start; margin-bottom: 80px;">
+        <div>
+          <div style="font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: #6d675a; margin-bottom: 20px;">Founder &amp; builder · Live in production</div>
+          <h3 style="margin: 0 0 24px; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(40px, 5vw, 64px); line-height: 1.05;">AgroB2B Hub</h3>
+          <p style="margin: 0 0 18px; font-size: 17px; line-height: 1.65; color: #b3ada0; text-wrap: pretty;">A B2B trading platform for the frozen fruit industry — connecting producers, cold storages, and buyers across Europe. I founded it, designed it, built it, and took it to market.</p>
+          <p style="margin: 0 0 36px; font-size: 17px; line-height: 1.65; color: #b3ada0; text-wrap: pretty;">Not an AI project — proof of something rarer. A live platform with real companies on it, covered by Netokracija, built and launched by one person. That end-to-end 0→1 process is exactly what I run for clients.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: baseline;">
+            <a href="https://agrob2bhub.com" target="_blank" rel="noopener" style="font-size: 16px; color: {{ accent }}; text-decoration: none; border-bottom: 1px solid {{ accent }}; padding-bottom: 3px;">agrob2bhub.com ↗</a>
+            <a href="https://www.netokracija.rs" target="_blank" rel="noopener" style="font-size: 16px; color: #96907f; text-decoration: none; border-bottom: 1px solid rgba(236,232,224,0.25); padding-bottom: 3px;" style-hover="color: #ece8e0;">Netokracija coverage ↗</a>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column;">
+          <sc-for list="{{ caseFacts }}" as="f" hint-placeholder-count="5">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 20px 0; border-top: 1px solid rgba(236,232,224,0.12);">
+              <span style="font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #6d675a; flex-shrink: 0;">{{ f.label }}</span>
+              <span style="font-size: 16px; color: #cfc9bd; text-align: right;">{{ f.value }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <sc-for list="{{ projects }}" as="pr" hint-placeholder-count="3">
+          <div data-reveal style="display: grid; grid-template-columns: minmax(200px, 1fr) 2fr auto; gap: 32px; align-items: baseline; padding: 36px 0; border-top: 1px solid rgba(236,232,224,0.12);">
+            <h3 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(22px, 2.4vw, 28px);">{{ pr.title }}</h3>
+            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #b3ada0; max-width: 58ch; text-wrap: pretty;">{{ pr.body }}</p>
+            <span style="font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: {{ accent }}; white-space: nowrap;">{{ pr.status }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" style="border-top: 1px solid rgba(236,232,224,0.14);">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 40px 32px 100px;">
+      <div data-reveal style="display: flex; align-items: baseline; gap: 24px; margin-bottom: 72px;">
+        <span style="font-family: 'Instrument Serif', serif; font-size: 20px; color: {{ accent }};">03</span>
+        <h2 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(32px, 4vw, 48px);">How I work</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 56px;">
+        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="3">
+          <div data-reveal>
+            <div style="font-family: 'Instrument Serif', serif; font-size: 56px; line-height: 1; color: {{ accent }}; margin-bottom: 24px;">{{ s.n }}</div>
+            <h3 style="margin: 0 0 14px; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 28px;">{{ s.title }}</h3>
+            <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #b3ada0; text-wrap: pretty;">{{ s.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid rgba(236,232,224,0.14);">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 40px 32px 100px;">
+      <div data-reveal style="display: flex; align-items: baseline; gap: 24px; margin-bottom: 72px;">
+        <span style="font-family: 'Instrument Serif', serif; font-size: 20px; color: {{ accent }};">04</span>
+        <h2 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(32px, 4vw, 48px);">Working together</h2>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <sc-for list="{{ plans }}" as="pl" hint-placeholder-count="3">
+          <div data-reveal style="display: grid; grid-template-columns: minmax(200px, 1fr) 2fr auto; gap: 32px; align-items: baseline; padding: 36px 0; border-top: 1px solid rgba(236,232,224,0.12);">
+            <h3 style="margin: 0; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 28px;">{{ pl.title }}</h3>
+            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #b3ada0; max-width: 58ch; text-wrap: pretty;">{{ pl.body }}</p>
+            <span style="font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #6d675a; white-space: nowrap;">{{ pl.terms }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="border-top: 1px solid rgba(236,232,224,0.14);">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 130px 32px 110px;">
+      <h2 data-reveal style="margin: 0 0 32px; font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(44px, 7vw, 96px); line-height: 1.02; max-width: 16ch; text-wrap: balance;">Have a project in mind? <em style="color: {{ accent }};">Let's scope it.</em></h2>
+      <p data-reveal style="margin: 0 0 52px; font-size: 18px; line-height: 1.6; color: #b3ada0; max-width: 52ch; text-wrap: pretty;">A 30-minute call. You describe the problem, I tell you honestly whether AI solves it — and what it would take to build. No pitch.</p>
+      <div data-reveal style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px;">
+        <a href="mailto:nikola@nikolapajovic.com" style="display: inline-block; font-size: 16px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: #0c0b09; background: {{ accent }}; text-decoration: none; padding: 16px 36px; border-radius: 999px;" style-hover="background: #ece8e0;">nikola@nikolapajovic.com</a>
+        <a href="https://www.linkedin.com/in/nikolapajovic" target="_blank" rel="noopener" style="font-size: 16px; color: #96907f; text-decoration: none; border-bottom: 1px solid rgba(236,232,224,0.25); padding-bottom: 3px;" style-hover="color: #ece8e0;">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid rgba(236,232,224,0.14);">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 32px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #6d675a;">
+      <span>© 2026 Nikola Pajović</span>
+      <span>Belgrade, Serbia · CET</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;accent&quot;: { &quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#ffb454&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#ffb454&quot;, &quot;#e2b23c&quot;, &quot;#ff8a5c&quot;, &quot;#d9c79a&quot;] }
+}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const els = document.querySelectorAll('[data-reveal]');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.top > window.innerHeight * 0.9) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(24px)';
+        el.style.transition = 'opacity 0.7s cubic-bezier(0.2,0.7,0.3,1), transform 0.7s cubic-bezier(0.2,0.7,0.3,1)';
+        io.observe(el);
+      }
+    });
+    this._io = io;
+  }
+  componentWillUnmount() { if (this._io) this._io.disconnect(); }
+  renderVals() {
+    return {
+      accent: this.props.accent ?? '#ffb454',
+      pillars: [
+        { title: 'Agents & Automation', body: 'Autonomous agents that do real work inside your operations — triage, research, data entry, customer workflows. Built to be reliable, observable, and cheap to run.', stack: 'tool use · orchestration · evals · human-in-the-loop' },
+        { title: 'RAG & LLM Systems', body: 'Retrieval pipelines over your documents and data that answer correctly, cite sources, and hold up under real usage. Measured with evals, not vibes.', stack: 'embeddings · hybrid search · reranking · eval harnesses' },
+        { title: '0→1 Product Consulting', body: 'You have an idea; I turn it into a launched product. Scope, architecture, build, deploy, iterate — the same way I built my own company.', stack: 'scoping · MVP build · launch · iteration' }
+      ],
+      caseFacts: [
+        { label: 'Role', value: 'Founder, sole engineer' },
+        { label: 'Scope', value: 'Marketplace, listings, matching, messaging' },
+        { label: 'Market', value: 'Frozen fruit trade, EU + Balkans' },
+        { label: 'Status', value: 'Live, companies onboarded' },
+        { label: 'Press', value: 'Featured in Netokracija' }
+      ],
+      projects: [
+        { title: 'Hermes', body: 'An autonomous agent system for SEO and content operations — research, writing, publishing, and monitoring running as coordinated agents. Building in public; case study to follow.', status: 'In development' },
+        { title: 'Blog-writing Telegram bots', body: 'Telegram bots that generate and publish complete blog posts on schedule — topic research, drafting, formatting, delivery. Content pipelines that run without a human in the loop.', status: 'Live' },
+        { title: 'Client sites & platforms', body: 'Production websites and web platforms designed and built end to end — from brief to deployment. The engineering foundation everything else stands on.', status: 'Shipped' }
+      ],
+      steps: [
+        { n: '1', title: 'Scope', body: 'A discovery call, then a written proposal: what gets built, what it costs, when it ships. Fixed. If AI is the wrong tool for your problem, I say so on the call.' },
+        { n: '2', title: 'Build', body: 'Short cycles, working software every week. You see progress in a live environment, not in status reports. Direct line to me — no intermediaries.' },
+        { n: '3', title: 'Ship', body: 'Deployed to your infrastructure, documented, handed over. Your team can run it without me — or I stay on retainer and keep improving it.' }
+      ],
+      plans: [
+        { title: 'Project', body: 'A defined system, delivered end to end. Agreed scope, fixed price, fixed timeline. Best for an agent, RAG system, or MVP with clear boundaries.', terms: 'From 2 weeks · fixed price' },
+        { title: 'Ongoing', body: 'A reserved block of my time each month — building, improving, and maintaining your AI systems as they grow. Priority response.', terms: 'Monthly · limited slots' },
+        { title: 'Discovery call', body: 'Thirty minutes on your problem. You leave with an honest read on feasibility, a rough architecture, and a cost range — whether or not we work together.', terms: '30 min · free' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

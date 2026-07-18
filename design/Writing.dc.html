@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Writing &amp; Case Studies — Nikola Pajović</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #f4f2ee; color: #16140f; font-family: 'Archivo', sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: #16140f; }
+a:hover { color: #2f45e6; }
+::selection { background: rgba(47,69,230,0.16); }
+</style>
+</helmet>
+<div style="background: #f4f2ee; min-height: 100vh;">
+
+  <nav style="display: flex; align-items: center; justify-content: space-between; gap: 24px; max-width: 1320px; margin: 0 auto; padding: 30px 36px;">
+    <a href="V5 - Timeline.dc.html" style="font-size: 16px; font-weight: 700; letter-spacing: -0.01em; text-decoration: none; color: #16140f;">Nikola Pajović</a>
+    <div style="display: flex; align-items: center; gap: 30px;">
+      <a href="About.dc.html" style="font-size: 15px; text-decoration: none; color: #6e6a5f;" style-hover="color: #16140f;">About</a>
+      <a href="Writing.dc.html" style="font-size: 15px; font-weight: 600; text-decoration: none; color: #16140f;">Writing</a>
+      <a href="V5 - Timeline.dc.html#contact" style="font-size: 15px; font-weight: 500; text-decoration: none; color: #f4f2ee; background: #16140f; padding: 10px 22px; border-radius: 999px;" style-hover="background: {{ accent }}; color: #f4f2ee;">Book a call</a>
+    </div>
+  </nav>
+
+  <header style="max-width: 1320px; margin: 0 auto; padding: 100px 36px 90px;">
+    <div data-reveal style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; color: #918c7e; margin-bottom: 36px;">WRITING &amp; CASE STUDIES</div>
+    <h1 data-reveal style="margin: 0 0 32px; font-size: clamp(40px, 6.5vw, 88px); line-height: 0.98; font-weight: 800; letter-spacing: -0.045em; max-width: 15ch; text-wrap: balance;">Notes from the <span style="color: {{ accent }};">build.</span></h1>
+    <p data-reveal style="margin: 0; font-size: 18px; line-height: 1.6; color: #5b574c; max-width: 54ch; text-wrap: pretty;">How I actually build these systems — architecture decisions, costs, failures, and results. No theory, no hype. If a post is marked "soon", it's being written between client work.</p>
+  </header>
+
+  <!-- Case studies -->
+  <section style="background: #16140f; color: #f4f2ee;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 100px 36px 110px;">
+      <div data-reveal style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 64px;">
+        <h2 style="margin: 0; font-size: clamp(30px, 4.5vw, 56px); font-weight: 800; letter-spacing: -0.04em;">Case studies</h2>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #7d7869;">HOW THE PROJECTS WERE BUILT</span>
+      </div>
+      <div style="display: flex; flex-direction: column;">
+        <sc-for list="{{ cases }}" as="c" hint-placeholder-count="3">
+          <div data-reveal style="display: grid; grid-template-columns: minmax(90px, 200px) 1fr; gap: 20px 48px; align-items: start; padding: 44px 0; border-top: 1px solid rgba(244,242,238,0.18);">
+            <div style="font-size: clamp(32px, 4.5vw, 64px); font-weight: 800; letter-spacing: -0.04em; line-height: 0.9; color: transparent; -webkit-text-stroke: 1.5px rgba(244,242,238,0.35);">{{ c.no }}</div>
+            <div>
+              <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 12px 20px; margin-bottom: 14px;">
+                <h3 style="margin: 0; font-size: clamp(22px, 2.6vw, 32px); font-weight: 700; letter-spacing: -0.02em;">{{ c.title }}</h3>
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: {{ accentLight }}; border: 1px solid rgba(138,154,255,0.4); padding: 4px 10px; border-radius: 999px;">{{ c.status }}</span>
+              </div>
+              <p style="margin: 0 0 18px; font-size: 16px; line-height: 1.65; color: #a5a094; max-width: 64ch; text-wrap: pretty;">{{ c.body }}</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 10px 24px; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #7d7869;">
+                <span>{{ c.meta }}</span>
+                <sc-if value="{{ c.isAgro }}" hint-placeholder-val="{{ false }}">
+                  <a href="https://agrob2bhub.com" target="_blank" rel="noopener" style="color: {{ accentLight }}; text-decoration: none; border-bottom: 1px solid rgba(138,154,255,0.5);">agrob2bhub.com ↗</a>
+                  <a href="https://www.netokracija.rs" target="_blank" rel="noopener" style="color: #a5a094; text-decoration: none; border-bottom: 1px solid rgba(244,242,238,0.3);" style-hover="color: #f4f2ee;">netokracija ↗</a>
+                </sc-if>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- Posts -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 110px 36px 120px;">
+    <div data-reveal style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 56px;">
+      <h2 style="margin: 0; font-size: clamp(30px, 4.5vw, 56px); font-weight: 800; letter-spacing: -0.04em;">Posts</h2>
+      <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #918c7e;">TECHNICAL, SPECIFIC, MONTHLY</span>
+    </div>
+    <div style="display: flex; flex-direction: column;">
+      <sc-for list="{{ posts }}" as="po" hint-placeholder-count="4">
+        <a href="{{ po.href }}" data-reveal style="display: grid; grid-template-columns: 1fr auto; gap: 12px 32px; align-items: baseline; padding: 34px 0; border-top: 1px solid #dcd8ce; text-decoration: none; color: #16140f;" style-hover="color: {{ accent }};">
+          <div>
+            <h3 style="margin: 0 0 10px; font-size: clamp(20px, 2.4vw, 30px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.2;">{{ po.title }}</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5b574c; max-width: 64ch; text-wrap: pretty;">{{ po.blurb }}</p>
+          </div>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #918c7e; white-space: nowrap;">{{ po.meta }}</span>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: #16140f; color: #f4f2ee;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 100px 36px 90px;">
+      <h2 data-reveal style="margin: 0 0 40px; font-size: clamp(32px, 5vw, 64px); font-weight: 800; letter-spacing: -0.04em; line-height: 1; max-width: 18ch; text-wrap: balance;">Want a system like these? <span style="color: {{ accentLight }};">Let's scope it.</span></h2>
+      <div data-reveal style="display: flex; flex-wrap: wrap; align-items: center; gap: 22px;">
+        <a href="mailto:nikola@nikolapajovic.com" style="display: inline-block; font-size: 16px; font-weight: 600; color: #16140f; background: #f4f2ee; text-decoration: none; padding: 15px 32px; border-radius: 999px;" style-hover="background: {{ accentLight }};">nikola@nikolapajovic.com</a>
+        <a href="V5 - Timeline.dc.html#contact" style="font-size: 15px; color: #a5a094; text-decoration: none; border-bottom: 1px solid rgba(244,242,238,0.3); padding-bottom: 2px;" style-hover="color: #f4f2ee;">Back to home ↗</a>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin-top: 90px; padding-top: 28px; border-top: 1px solid rgba(244,242,238,0.15); font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #7d7869;">
+        <span>© 2026 Nikola Pajović</span>
+        <span>Belgrade, Serbia · CET</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;accent&quot;: { &quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#2f45e6&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#2f45e6&quot;, &quot;#e6482f&quot;, &quot;#0f8a5f&quot;, &quot;#16140f&quot;] }
+}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const els = document.querySelectorAll('[data-reveal]');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.top > window.innerHeight * 0.9) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(24px)';
+        el.style.transition = 'opacity 0.7s cubic-bezier(0.2,0.7,0.3,1), transform 0.7s cubic-bezier(0.2,0.7,0.3,1)';
+        io.observe(el);
+      }
+    });
+    this._io = io;
+  }
+  componentWillUnmount() { if (this._io) this._io.disconnect(); }
+  renderVals() {
+    return {
+      accent: this.props.accent ?? '#2f45e6',
+      accentLight: '#8a9aff',
+      cases: [
+        { no: '01', title: 'AgroB2B Hub', status: 'LIVE · PRESS', isAgro: true, meta: 'FOUNDER · MARKETPLACE · 0→1',
+          body: 'How one person takes a B2B marketplace from empty repo to live platform with real companies and press coverage: scoping the frozen fruit trade, building marketplace mechanics (listings, matching, messaging), onboarding an industry that lives on the phone. Full write-up coming.' },
+        { no: '02', title: 'Blog-writing Telegram bots', status: 'LIVE', isAgro: false, meta: 'LLM PIPELINE · AUTOMATION',
+          body: 'A content pipeline that lives entirely inside Telegram: research → structure → draft → format → publish, on schedule, with zero clicks. Architecture, prompt design, failure handling, and per-post running costs. Full write-up coming.' },
+        { no: '03', title: 'Hermes', status: 'IN DEVELOPMENT', isAgro: false, meta: 'MULTI-AGENT · SEO OPS · BUILDING IN PUBLIC',
+          body: 'A network of coordinated agents running a complete SEO operation — keyword research, briefs, drafting, internal linking, publishing, rank monitoring. Being built in public: devlogs will land here as it progresses.' }
+      ],
+      posts: [
+        { href: '#', title: 'How my Telegram bot researches, writes, and publishes a blog post with zero clicks', blurb: 'The full pipeline behind my blog bots — architecture, prompt design, failure handling, and what it costs to run per post.', meta: 'AUTOMATION · SOON' },
+        { href: '#', title: 'Hermes devlog #1: designing a multi-agent SEO system', blurb: 'Why one agent isn\u2019t enough, how the agents divide the work, and where humans stay in the loop.', meta: 'AGENTS · SOON' },
+        { href: '#', title: 'RAG that doesn\u2019t hallucinate: an eval-first build process', blurb: 'Define the eval set before the pipeline, then make the numbers go up. The process I use on client RAG systems.', meta: 'RAG · SOON' },
+        { href: '#', title: 'What founding a B2B marketplace taught me about shipping AI products', blurb: 'Lessons from AgroB2B Hub that transfer directly to 0→1 AI work: scope ruthlessly, launch embarrassingly early, talk to users daily.', meta: '0→1 · SOON' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Nikola Pajović — AI Consultant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #f4f2ee; color: #16140f; font-family: 'Archivo', sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: #16140f; }
+a:hover { color: #2f45e6; }
+::selection { background: rgba(47,69,230,0.16); }
+</style>
+</helmet>
+<div style="background: #f4f2ee; min-height: 100vh;">
+
+  <nav style="display: flex; align-items: center; justify-content: space-between; gap: 24px; max-width: 1280px; margin: 0 auto; padding: 30px 36px;">
+    <a href="#top" style="font-size: 16px; font-weight: 600; letter-spacing: -0.01em; text-decoration: none; color: #16140f;">Nikola Pajović</a>
+    <div style="display: flex; align-items: center; gap: 30px;">
+      <a href="#work" style="font-size: 15px; text-decoration: none; color: #6e6a5f;" style-hover="color: #16140f;">Work</a>
+      <a href="#process" style="font-size: 15px; text-decoration: none; color: #6e6a5f;" style-hover="color: #16140f;">Process</a>
+      <a href="#contact" style="font-size: 15px; font-weight: 500; text-decoration: none; color: #f4f2ee; background: #16140f; padding: 10px 22px; border-radius: 999px;" style-hover="background: {{ accent }}; color: #f4f2ee;">Book a call</a>
+    </div>
+  </nav>
+
+  <header id="top" style="max-width: 1280px; margin: 0 auto; padding: 120px 36px 140px;">
+    <h1 data-reveal style="margin: 0 0 40px; font-size: clamp(48px, 8.5vw, 116px); line-height: 0.98; font-weight: 700; letter-spacing: -0.045em; max-width: 13ch; text-wrap: balance;">I build AI systems that make it to <span style="color: {{ accent }};">production.</span></h1>
+    <div data-reveal style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; align-items: end; border-top: 1px solid #dcd8ce; padding-top: 36px;">
+      <p style="margin: 0; font-size: 19px; line-height: 1.55; color: #5b574c; max-width: 50ch; text-wrap: pretty;">Agents, RAG pipelines, LLM products — designed, built, and shipped by one senior engineer. No account managers, no discovery workshops, no decks.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: flex-end; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #918c7e;">
+        <span>Belgrade → Worldwide</span>
+        <span style="color: {{ accent }};">● Available Q3 2026</span>
+      </div>
+    </div>
+  </header>
+
+  <section style="background: #16140f; color: #f4f2ee;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 100px 36px;">
+      <div data-reveal style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 64px;">
+        <h2 style="margin: 0; font-size: clamp(30px, 4vw, 44px); font-weight: 700; letter-spacing: -0.03em;">What I do</h2>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #7d7869;">01</span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 48px;">
+        <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="3">
+          <div data-reveal style="border-top: 1px solid rgba(244,242,238,0.2); padding-top: 28px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: {{ accentLight }}; margin-bottom: 22px;">{{ p.index }}</div>
+            <h3 style="margin: 0 0 14px; font-size: 22px; font-weight: 600; letter-spacing: -0.015em;">{{ p.title }}</h3>
+            <p style="margin: 0 0 22px; font-size: 15.5px; line-height: 1.6; color: #a5a094; text-wrap: pretty;">{{ p.body }}</p>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; line-height: 1.9; color: #7d7869;">{{ p.stack }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 100px 36px;">
+      <div data-reveal style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 64px;">
+        <h2 style="margin: 0; font-size: clamp(30px, 4vw, 44px); font-weight: 700; letter-spacing: -0.03em;">Selected work</h2>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #918c7e;">02</span>
+      </div>
+      <div data-reveal style="background: #fbfaf7; border: 1px solid #dcd8ce; border-radius: 4px; padding: clamp(32px, 5vw, 64px); margin-bottom: 24px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 56px; align-items: start;">
+          <div>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.06em; color: #918c7e; margin-bottom: 20px;">FOUNDER &amp; BUILDER · LIVE IN PRODUCTION</div>
+            <h3 style="margin: 0 0 22px; font-size: clamp(34px, 4.5vw, 56px); font-weight: 700; letter-spacing: -0.035em; line-height: 1;">AgroB2B Hub</h3>
+            <p style="margin: 0 0 16px; font-size: 16.5px; line-height: 1.6; color: #5b574c; text-wrap: pretty;">A B2B trading platform for the frozen fruit industry — connecting producers, cold storages, and buyers across Europe. I founded it, designed it, built it, and took it to market.</p>
+            <p style="margin: 0 0 32px; font-size: 16.5px; line-height: 1.6; color: #5b574c; text-wrap: pretty;">Not an AI project — proof of something rarer. A live platform with real companies on it, covered by Netokracija, built and launched by one person. That end-to-end 0→1 process is exactly what I run for clients.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 14px;">
+              <a href="https://agrob2bhub.com" target="_blank" rel="noopener" style="display: inline-block; font-size: 15px; font-weight: 500; color: #f4f2ee; background: {{ accent }}; text-decoration: none; padding: 12px 26px; border-radius: 999px;" style-hover="background: #16140f; color: #f4f2ee;">agrob2bhub.com ↗</a>
+              <a href="https://www.netokracija.rs" target="_blank" rel="noopener" style="display: inline-block; font-size: 15px; color: #5b574c; text-decoration: none; border: 1px solid #cfcabe; padding: 12px 26px; border-radius: 999px;" style-hover="color: #16140f; border-color: #16140f;">Netokracija ↗</a>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column;">
+            <sc-for list="{{ caseFacts }}" as="f" hint-placeholder-count="5">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding: 18px 0; border-bottom: 1px solid #e6e2d8;">
+                <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #918c7e; flex-shrink: 0;">{{ f.label }}</span>
+                <span style="font-size: 15px; color: #3a362c; text-align: right;">{{ f.value }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+        <sc-for list="{{ projects }}" as="pr" hint-placeholder-count="3">
+          <div data-reveal style="background: #fbfaf7; border: 1px solid #dcd8ce; border-radius: 4px; padding: 36px 32px 40px; display: flex; flex-direction: column;" style-hover="border-color: {{ accent }};">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 26px; font-family: 'IBM Plex Mono', monospace; font-size: 12px;">
+              <span style="letter-spacing: 0.06em; color: {{ accent }};">{{ pr.tag }}</span>
+              <span style="color: #918c7e;">{{ pr.status }}</span>
+            </div>
+            <h3 style="margin: 0 0 12px; font-size: 21px; font-weight: 600; letter-spacing: -0.015em;">{{ pr.title }}</h3>
+            <p style="margin: 0 0 24px; font-size: 15px; line-height: 1.6; color: #5b574c; flex: 1; text-wrap: pretty;">{{ pr.body }}</p>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #918c7e;">{{ pr.stack }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" style="border-top: 1px solid #dcd8ce;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 100px 36px;">
+      <div data-reveal style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 64px;">
+        <h2 style="margin: 0; font-size: clamp(30px, 4vw, 44px); font-weight: 700; letter-spacing: -0.03em;">How I work</h2>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #918c7e;">03</span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 48px;">
+        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="3">
+          <div data-reveal style="border-top: 2px solid #16140f; padding-top: 28px;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: {{ accent }}; margin-bottom: 18px;">STEP {{ s.n }}</div>
+            <h3 style="margin: 0 0 14px; font-size: 24px; font-weight: 600; letter-spacing: -0.02em;">{{ s.title }}</h3>
+            <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #5b574c; text-wrap: pretty;">{{ s.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top: 1px solid #dcd8ce;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 100px 36px;">
+      <div data-reveal style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 64px;">
+        <h2 style="margin: 0; font-size: clamp(30px, 4vw, 44px); font-weight: 700; letter-spacing: -0.03em;">Working together</h2>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #918c7e;">04</span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+        <sc-for list="{{ plans }}" as="pl" hint-placeholder-count="3">
+          <div data-reveal style="background: #fbfaf7; border: 1px solid #dcd8ce; border-radius: 4px; padding: 36px 32px 40px; display: flex; flex-direction: column;">
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: {{ accent }}; margin-bottom: 24px;">{{ pl.tag }}</div>
+            <h3 style="margin: 0 0 12px; font-size: 22px; font-weight: 600; letter-spacing: -0.015em;">{{ pl.title }}</h3>
+            <p style="margin: 0 0 28px; font-size: 15px; line-height: 1.6; color: #5b574c; flex: 1; text-wrap: pretty;">{{ pl.body }}</p>
+            <div style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #3a362c;">{{ pl.terms }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="background: #16140f; color: #f4f2ee;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 120px 36px 100px;">
+      <h2 data-reveal style="margin: 0 0 30px; font-size: clamp(38px, 6.5vw, 84px); font-weight: 700; letter-spacing: -0.04em; line-height: 1; max-width: 16ch; text-wrap: balance;">Have a project in mind? <span style="color: {{ accentLight }};">Let's scope it.</span></h2>
+      <p data-reveal style="margin: 0 0 48px; font-size: 18px; line-height: 1.6; color: #a5a094; max-width: 52ch; text-wrap: pretty;">A 30-minute call. You describe the problem, I tell you honestly whether AI solves it — and what it would take to build. No pitch.</p>
+      <div data-reveal style="display: flex; flex-wrap: wrap; align-items: center; gap: 22px;">
+        <a href="mailto:nikola@nikolapajovic.com" style="display: inline-block; font-size: 16px; font-weight: 500; color: #16140f; background: #f4f2ee; text-decoration: none; padding: 15px 32px; border-radius: 999px;" style-hover="background: {{ accentLight }}; color: #16140f;">nikola@nikolapajovic.com</a>
+        <a href="https://www.linkedin.com/in/nikolapajovic" target="_blank" rel="noopener" style="font-size: 15px; color: #a5a094; text-decoration: none; border-bottom: 1px solid rgba(244,242,238,0.3); padding-bottom: 2px;" style-hover="color: #f4f2ee;">LinkedIn ↗</a>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin-top: 100px; padding-top: 28px; border-top: 1px solid rgba(244,242,238,0.15); font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #7d7869;">
+        <span>© 2026 Nikola Pajović</span>
+        <span>Belgrade, Serbia · CET</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;accent&quot;: { &quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#2f45e6&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#2f45e6&quot;, &quot;#e6482f&quot;, &quot;#0f8a5f&quot;, &quot;#16140f&quot;] }
+}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const els = document.querySelectorAll('[data-reveal]');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.top > window.innerHeight * 0.9) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(24px)';
+        el.style.transition = 'opacity 0.7s cubic-bezier(0.2,0.7,0.3,1), transform 0.7s cubic-bezier(0.2,0.7,0.3,1)';
+        io.observe(el);
+      }
+    });
+    this._io = io;
+  }
+  componentWillUnmount() { if (this._io) this._io.disconnect(); }
+  renderVals() {
+    return {
+      accent: this.props.accent ?? '#2f45e6',
+      accentLight: '#8a9aff',
+      pillars: [
+        { index: '/01', title: 'Agents & Automation', body: 'Autonomous agents that do real work inside your operations — triage, research, data entry, customer workflows. Built to be reliable, observable, and cheap to run.', stack: 'tool use · orchestration · evals · human-in-the-loop' },
+        { index: '/02', title: 'RAG & LLM Systems', body: 'Retrieval pipelines over your documents and data that answer correctly, cite sources, and hold up under real usage. Measured with evals, not vibes.', stack: 'embeddings · hybrid search · reranking · eval harnesses' },
+        { index: '/03', title: '0→1 Product Consulting', body: 'You have an idea; I turn it into a launched product. Scope, architecture, build, deploy, iterate — the same way I built my own company.', stack: 'scoping · MVP build · launch · iteration' }
+      ],
+      caseFacts: [
+        { label: 'ROLE', value: 'Founder, sole engineer' },
+        { label: 'SCOPE', value: 'Marketplace, listings, matching, messaging' },
+        { label: 'MARKET', value: 'Frozen fruit trade, EU + Balkans' },
+        { label: 'STATUS', value: 'Live, companies onboarded' },
+        { label: 'PRESS', value: 'Featured in Netokracija' }
+      ],
+      projects: [
+        { tag: 'AGENT SYSTEM', status: 'IN DEVELOPMENT', title: 'Hermes', body: 'An autonomous agent system for SEO and content operations — research, writing, publishing, and monitoring running as coordinated agents. Building in public; case study to follow.', stack: 'multi-agent · SEO automation' },
+        { tag: 'AUTOMATION', status: 'LIVE', title: 'Blog-writing Telegram bots', body: 'Telegram bots that generate and publish complete blog posts on schedule — topic research, drafting, formatting, delivery. Content pipelines that run without a human in the loop.', stack: 'LLM pipelines · Telegram API · scheduling' },
+        { tag: 'WEB', status: 'SHIPPED', title: 'Client sites & platforms', body: 'Production websites and web platforms designed and built end to end — from brief to deployment. The engineering foundation everything else stands on.', stack: 'full-stack · deploy · handover' }
+      ],
+      steps: [
+        { n: '1', title: 'Scope', body: 'A discovery call, then a written proposal: what gets built, what it costs, when it ships. Fixed. If AI is the wrong tool for your problem, I say so on the call.' },
+        { n: '2', title: 'Build', body: 'Short cycles, working software every week. You see progress in a live environment, not in status reports. Direct line to me — no intermediaries.' },
+        { n: '3', title: 'Ship', body: 'Deployed to your infrastructure, documented, handed over. Your team can run it without me — or I stay on retainer and keep improving it.' }
+      ],
+      plans: [
+        { tag: 'FIXED SCOPE', title: 'Project', body: 'A defined system, delivered end to end. Agreed scope, fixed price, fixed timeline. Best for an agent, RAG system, or MVP with clear boundaries.', terms: 'from 2 weeks · fixed price' },
+        { tag: 'RETAINER', title: 'Ongoing', body: 'A reserved block of my time each month — building, improving, and maintaining your AI systems as they grow. Priority response.', terms: 'monthly · limited slots' },
+        { tag: 'FREE', title: 'Discovery call', body: 'Thirty minutes on your problem. You leave with an honest read on feasibility, a rough architecture, and a cost range — whether or not we work together.', terms: '30 min · no obligation' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

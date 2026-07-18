@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>About — Nikola Pajović</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+html { scroll-behavior: smooth; }
+body { margin: 0; background: #f4f2ee; color: #16140f; font-family: 'Archivo', sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: #16140f; }
+a:hover { color: #2f45e6; }
+::selection { background: rgba(47,69,230,0.16); }
+</style>
+</helmet>
+<div style="background: #f4f2ee; min-height: 100vh;">
+
+  <nav style="display: flex; align-items: center; justify-content: space-between; gap: 24px; max-width: 1320px; margin: 0 auto; padding: 30px 36px;">
+    <a href="V5 - Timeline.dc.html" style="font-size: 16px; font-weight: 700; letter-spacing: -0.01em; text-decoration: none; color: #16140f;">Nikola Pajović</a>
+    <div style="display: flex; align-items: center; gap: 30px;">
+      <a href="About.dc.html" style="font-size: 15px; font-weight: 600; text-decoration: none; color: #16140f;">About</a>
+      <a href="Writing.dc.html" style="font-size: 15px; text-decoration: none; color: #6e6a5f;" style-hover="color: #16140f;">Writing</a>
+      <a href="V5 - Timeline.dc.html#contact" style="font-size: 15px; font-weight: 500; text-decoration: none; color: #f4f2ee; background: #16140f; padding: 10px 22px; border-radius: 999px;" style-hover="background: {{ accent }}; color: #f4f2ee;">Book a call</a>
+    </div>
+  </nav>
+
+  <!-- Intro -->
+  <header style="max-width: 1320px; margin: 0 auto; padding: 100px 36px 110px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 64px; align-items: start;">
+      <div>
+        <div data-reveal style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; color: #918c7e; margin-bottom: 36px;">ABOUT</div>
+        <h1 data-reveal style="margin: 0 0 36px; font-size: clamp(40px, 6vw, 80px); line-height: 1; font-weight: 800; letter-spacing: -0.045em; text-wrap: balance;">Engineer first. Everything else <span style="color: {{ accent }};">second.</span></h1>
+        <p data-reveal style="margin: 0 0 20px; font-size: 18px; line-height: 1.65; color: #5b574c; max-width: 56ch; text-wrap: pretty;">I'm Nikola Pajović, an independent AI consultant based in Belgrade. I design and build AI systems — agents, RAG pipelines, LLM products — for clients who need them working in production, not in a slide deck.</p>
+        <p data-reveal style="margin: 0 0 20px; font-size: 18px; line-height: 1.65; color: #5b574c; max-width: 56ch; text-wrap: pretty;">Before consulting, I founded and built AgroB2B Hub — a live B2B trading platform for the frozen fruit industry — alone, from empty repo to press coverage. That experience is why I work the way I do: small scope, working software every week, ship or say why not.</p>
+        <p data-reveal style="margin: 0; font-size: 18px; line-height: 1.65; color: #5b574c; max-width: 56ch; text-wrap: pretty;">When I'm not on client work I build my own systems — Telegram bots that write and publish blogs, and Hermes, a multi-agent SEO system I'm building in public.</p>
+      </div>
+      <div data-reveal style="position: relative; min-height: 460px;">
+        <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="about-portrait" shape="rounded" radius="6" fit="cover" placeholder="Drop your portrait here" style="width: 100%; height: 100%; position: absolute; inset: 0;" hint-size="100%,460px"></x-import>
+      </div>
+    </div>
+  </header>
+
+  <!-- Background: dark timeline block, V5 style -->
+  <section style="background: #16140f; color: #f4f2ee;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 110px 36px 120px;">
+      <div data-reveal style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 24px; margin-bottom: 80px;">
+        <h2 style="margin: 0; font-size: clamp(32px, 5vw, 64px); font-weight: 800; letter-spacing: -0.04em;">Background</h2>
+        <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: #7d7869;">EDUCATION &amp; PATH</span>
+      </div>
+      <div style="position: relative; padding-left: clamp(28px, 5vw, 60px);">
+        <div style="position: absolute; left: 7px; top: 8px; bottom: 8px; width: 1px; background: rgba(244,242,238,0.2);"></div>
+        <sc-for list="{{ bio }}" as="b" hint-placeholder-count="4">
+          <div data-reveal style="position: relative; padding-bottom: 72px;">
+            <div style="position: absolute; left: calc(4px - clamp(28px, 5vw, 60px)); top: 6px; width: 9px; height: 9px; border-radius: 50%; background: {{ accentLight }}; box-shadow: 0 0 0 5px #16140f, 0 0 0 6px rgba(138,154,255,0.4);"></div>
+            <div style="display: grid; grid-template-columns: minmax(100px, 220px) 1fr; gap: 16px 48px; align-items: start;">
+              <div style="font-size: clamp(28px, 4vw, 56px); font-weight: 800; letter-spacing: -0.04em; line-height: 0.95; color: transparent; -webkit-text-stroke: 1.5px rgba(244,242,238,0.35);">{{ b.years }}</div>
+              <div>
+                <div style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: {{ accentLight }}; margin-bottom: 12px;">{{ b.tag }}</div>
+                <h3 style="margin: 0 0 12px; font-size: clamp(20px, 2.4vw, 28px); font-weight: 700; letter-spacing: -0.02em;">{{ b.title }}</h3>
+                <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #a5a094; max-width: 62ch; text-wrap: pretty;">{{ b.body }}</p>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- Principles -->
+  <section style="max-width: 1320px; margin: 0 auto; padding: 110px 36px;">
+    <div data-reveal style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; color: #918c7e; margin-bottom: 40px;">HOW I THINK ABOUT THE WORK</div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 48px;">
+      <sc-for list="{{ principles }}" as="p" hint-placeholder-count="3">
+        <div data-reveal style="border-top: 2px solid #16140f; padding-top: 28px;">
+          <h3 style="margin: 0 0 14px; font-size: 24px; font-weight: 700; letter-spacing: -0.02em;">{{ p.title }}</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #5b574c; text-wrap: pretty;">{{ p.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: #16140f; color: #f4f2ee;">
+    <div style="max-width: 1320px; margin: 0 auto; padding: 100px 36px 90px;">
+      <h2 data-reveal style="margin: 0 0 40px; font-size: clamp(32px, 5vw, 64px); font-weight: 800; letter-spacing: -0.04em; line-height: 1; max-width: 18ch; text-wrap: balance;">Want the longer version? <span style="color: {{ accentLight }};">Ask me on a call.</span></h2>
+      <div data-reveal style="display: flex; flex-wrap: wrap; align-items: center; gap: 22px;">
+        <a href="mailto:nikola@nikolapajovic.com" style="display: inline-block; font-size: 16px; font-weight: 600; color: #16140f; background: #f4f2ee; text-decoration: none; padding: 15px 32px; border-radius: 999px;" style-hover="background: {{ accentLight }};">nikola@nikolapajovic.com</a>
+        <a href="https://www.linkedin.com/in/nikolapajovic" target="_blank" rel="noopener" style="font-size: 15px; color: #a5a094; text-decoration: none; border-bottom: 1px solid rgba(244,242,238,0.3); padding-bottom: 2px;" style-hover="color: #f4f2ee;">LinkedIn ↗</a>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin-top: 90px; padding-top: 28px; border-top: 1px solid rgba(244,242,238,0.15); font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; color: #7d7869;">
+        <span>© 2026 Nikola Pajović</span>
+        <span>Belgrade, Serbia · CET</span>
+      </div>
+    </div>
+  </section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;accent&quot;: { &quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#2f45e6&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#2f45e6&quot;, &quot;#e6482f&quot;, &quot;#0f8a5f&quot;, &quot;#16140f&quot;] }
+}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const els = document.querySelectorAll('[data-reveal]');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.top > window.innerHeight * 0.9) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(24px)';
+        el.style.transition = 'opacity 0.7s cubic-bezier(0.2,0.7,0.3,1), transform 0.7s cubic-bezier(0.2,0.7,0.3,1)';
+        io.observe(el);
+      }
+    });
+    this._io = io;
+  }
+  componentWillUnmount() { if (this._io) this._io.disconnect(); }
+  renderVals() {
+    return {
+      accent: this.props.accent ?? '#2f45e6',
+      accentLight: '#8a9aff',
+      bio: [
+        { years: '20XX–XX', tag: 'EDUCATION', title: 'University — degree, field', body: 'Placeholder: your degree, university, what you focused on, anything notable (thesis, competitions, side projects during studies). Send me the real details and I\u2019ll write it properly.' },
+        { years: '20XX–XX', tag: 'EARLY WORK', title: 'First engineering years', body: 'Placeholder: where you started, what you built, what stack — the years that made you an engineer. Client sites and platforms, delivered end to end.' },
+        { years: '2023–24', tag: 'FOUNDER', title: 'AgroB2B Hub', body: 'Founded, designed, and built a live B2B trading platform for the frozen fruit industry — alone. Real companies onboarded, covered by Netokracija. The proof behind every claim on this site.' },
+        { years: '2025–', tag: 'NOW', title: 'Independent AI consulting', body: 'Full focus on AI systems: agents, RAG pipelines, LLM products for foreign B2B clients — plus my own builds: blog-writing Telegram bots in production and Hermes, a multi-agent SEO system, in development.' }
+      ],
+      principles: [
+        { title: 'Production is the bar', body: 'A system that only works in a demo doesn\u2019t work. Everything I build is measured by whether it survives real users, real data, and real load.' },
+        { title: 'One engineer, whole problem', body: 'You talk to the person writing the code. Scope, architecture, build, deploy — one head holding the whole picture beats a team passing tickets.' },
+        { title: 'Honest over impressive', body: 'If AI is the wrong tool for your problem, I say so on the first call. Saying no early is cheaper for both of us than a failed project.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
